@@ -18,6 +18,10 @@ app.use(express.json());
 
 const port=process.env.PORT;
 
+app.get("/", (req, res) => {
+  res.send("🚀 CourseHub Backend is Running Successfully");
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/courses", courseRoutes);
 app.use("/api/enrollments", enrollmentRoutes);
